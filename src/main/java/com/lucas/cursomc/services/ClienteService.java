@@ -1,7 +1,7 @@
 package com.lucas.cursomc.services;
 
 import com.lucas.cursomc.domain.Cliente;
-import com.lucas.cursomc.exceptions.ObjectNotFoundException;
+import com.lucas.cursomc.services.exceptions.ObjectNotFoundException;
 import com.lucas.cursomc.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

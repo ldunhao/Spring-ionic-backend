@@ -6,8 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.lucas.cursomc.domain.Categoria;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -39,4 +37,12 @@ public class CategoriaResource {
         obj = service.update(obj);
         return ResponseEntity.noContent().build();
     };
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+
+    }
+
 }
